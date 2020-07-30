@@ -9,11 +9,25 @@
 
     </article>
     <input type="button" value="fetch" onclick="
+     /*
     fetch('css').then(function(response){
       response.text().then(function(text){
         document.querySelector('article').innerHTML = text;
       })
     })
+    */
+    //asynchronous
+    //var callbackme = function(){
+    //  console.log('response end');
+    //}
+    function callbackme(){
+      console.log('response end');
+    }
+    fetch('html').then(function(response){
+      console.log('response end');
+    });
+    console.log(1);
+    console.log(2);
     ">
   </body>
 </html>
