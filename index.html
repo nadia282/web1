@@ -8,9 +8,7 @@
   </head>
   <body>
     <h1><a href="index.html">WEB</a></h1>
-    <input type="button" id="night_day" value="night" onclick="
-    nightDayHandler(this);
-    ">
+    <input type="button" id="night_day" value="night"  onclick="toggle(this);">
     <ol id="nav">
     </ol>
     <article>
@@ -33,10 +31,10 @@
             var item = items[i];
             item = item.trim();
             var tag = '<li><a href="#!'+item+'" onclick="+fetchPage(\''+item+'\')";>'+item+'</a></li>';
-            tag = tag+tag;
+            tags = tags+tag;
             console.log("item["+i+"]"+item);
           }
-          document.querySelector('#nav').innerHTML = tag;
+          document.querySelector('#nav').innerHTML = tags;
         })
       })
 
